@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href ="{% static 'about.css' %}">
+</head>
+
+   <section id="about" class="section">
+        <div class="container">
+        <h2>About Us</h2>
+        <p>{{about_content}}</p>
+        <p>With a wide variety of restaurants to choose from, you can enjoy your favorite meals, discover new places, and enjoy convenience at your fingertips.</p>
+        </div>
+   </section>
+
+   <section id="mission" class="section">
+        <div class="container">
+        <h2>Our Mission</h2>
+        <p>We aim to bridge the gap between food lovers and great restaurants by offering an easy-to-use platform for food delivery, discovery, and reviews. Our goal is to be the most trusted and loved food delivery service across the world.</p>
+        </div>
+   </section>
+
+
+   <footer>
+        <div class="footer-container">
+        <p>&copy; 2025 Zomato Model. All Rights Reserved.</p>
+        </div>
+   </footer>
+{% endblock %}   

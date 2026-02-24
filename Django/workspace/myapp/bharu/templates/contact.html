@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href ="{% static 'contact.css' %}">
+<section class="contact-us">
+        <h1>Contact Us</h1>
+        <div class="contact-details">
+            <p>If you have any queries, feel free to reach out!</p>
+            <ul>
+                <li><strong>Email:</strong> support@zomato.com</li>
+                <li><strong>Phone:</strong> +1-800-123-4567</li>
+                <li><strong>Address:</strong> 123 Zomato Street, City, Country</li>
+            </ul>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            {% for field in form %}
+                {%if field.errors %}
+                   <div class = "col-12">
+                        <span class="fw-bold">{{field.label_tag}}</span>
+                        {%for error in field.errors %}
+                        <span class="text_danger">{{error}}</span>
+                        {%endfor%}
+                    </div>
+                {%endif%}
+
+            {%endfor%} 
+            
+            {% if success_message %}
+                <div class ="alert-success" role"alert">
+                    {{success_message}}
+                </div>
+            {%endif%}   
+
+            <form action="#" method="POST"> 
+                {%csrf_token %}
+                <div class=fn>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" value="{{name}}" name="name">
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" value="{{email}}"name="email">
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message"value="{{message}}" name="message"></textarea>
+                </div>    
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+{% endblock %} 

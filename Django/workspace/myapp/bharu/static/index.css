@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.navigation{
+    background-color: rgb(16, 10, 53);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.navigation ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 25px; 
+    position: relative;
+    top: 25px;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    font-family: fantasy;
+}
+.title{
+    font-size: 25px;
+    color: rgb(14, 149, 202);
+    font-family: fantasy;
+    position: relative;
+    left: 30px;
+    top: 10px;
+}
+.container{
+    background-image: url("3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    position: relative;
+}
+.content {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    line-height: 70px;
+}
+.content h2{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(104, 181, 204);
+}
+.content h1{
+    text-align: center;
+    color: rgb(255, 252, 252);
+    font-size: 70px;
+    font-family: fantasy;
+    letter-spacing: 10px;
+    font-variant: small-caps;
+}
+.content h3{
+    text-align: center;
+    color: rgb(255, 252, 252);
+    font-size: 40px;
+    font-family: fantasy;
+    letter-spacing: 10px;
+    font-variant: small-caps;
+}
+button{
+    background: transparent;
+    font-size: 20px;
+    font-family: fantasy;
+    position: relative;
+    left: 45%;
+    color: white;
+}

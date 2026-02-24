@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="menu-details">
+                <div class="menu-text" style= font-size:30px>
+                    <h1>{{post.title}} <small>({{post.category.name}})</small></h1>
+                </div>
+                <div class="menu-img">
+                    <img src="{{post.img_url}}" alt="">
+                </div>
+                <div class="click">
+                    <h3 style= "font-size:40px">{{post.content}}</h3>
+                </div>   
+            </div>
+            <div class="releted_posts">
+                <h5 class="card" style= font-size:30px> Related Posts</h5>
+                <ul class="list">
+                    {%for related_post in related_posts %}
+                    <li><a href="{% url 'bharu:details' related_post.id%}">{{related_post.title}}</a></li>
+                    {% endfor %}
+                </ul>    
+            </div>
+            
+{% endblock %}            
